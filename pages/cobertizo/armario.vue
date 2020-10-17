@@ -1,17 +1,17 @@
 <template>
   <div class="container">
     <div class="flex flex-col justify-center">
-      <h1 class="subtitle">Búsqueda de llave del cobertizo</h1>
-      <h4 class="mb-4">Deberíamos buscar donde podría estar la llave</h4>
+      <h1 class="subtitle">Frente al armario del cobertizo</h1>
+      <h4 class="mb-4">Este armario tiene llave...</h4>
       <img
         v-if="open"
-        src="https://s3.eu-central-1.amazonaws.com/cdnm.westwing.com/glossary/uploads/es/2014/08/Westwing_Du_Bout_du_Monde_FINAL_10.jpg"
+        src="https://thumbs.dreamstime.com/t/armario-abandonado-viejo-de-la-puerta-para-el-candado-%C3%A9ste-es-los-footae-del-154116187.jpg"
         alt=""
         class="my-5 max-h-5"
       />
       <img
         v-if="!open"
-        src="https://politify.us/wp-content/uploads/2018/11/reciclar-muebles-antiguos-y-darles-una-nueva-vida.gif"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx478suJlFXfB-OKOygXUXRnYt1VUrFevLRQ&usqp=CAU"
         alt=""
         class="my-5 max-h-5"
       />
@@ -40,7 +40,7 @@
             <div class="flex flex-col">
               <button
                 class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                @click="$router.push('/busqueda-llave-cobertizo')"
+                @click="$router.push('/casa')"
               >
                 Volver al living
               </button>

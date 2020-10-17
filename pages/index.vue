@@ -1,57 +1,95 @@
 <template>
   <div class="container">
-    <div class="justify-center">
-      <h1 class="title">Escape Room</h1>
-      <h3 class="subtitle">Campamento de Verano Jóvenes Metro</h3>
-      <img
-        src="https://imganuncios.mitula.net/medium/casa_nueva_en_alquiler_primera_seccion_delta_1_ba%C3%B1o_5950066594042062417.jpg"
-        alt=""
-      />
-      <p>
-        Buenass, estve pensando una histroia y se me ocurrio que podiamos ser
-        nosotrxs los protagonistas.. es decir se me ocurre que planificamos ir
-        todxs juntxs a un "campamento", un finde a una isla en el tigre.. en la
-        isla la idea es quedarnos una noche.. llegamos todos super felices nos
-        ponemos a hacer un asado para almorzar a la tarde jugamos a algo y a la
-        noche la idea es hacer unas pizzas a la parrilla... Entonces se empieza
-        a oscurecer y nos predisponemos a empezar a amasar para hacer las
-        pizzas... el día si bien estaba nublado no parecia que iba a ponerse a
-        llover.. pero mientras que estamso preparando la cena, empieza a
-        llover,,, al prinicpio nos parecia que estaba bueno porque le daba
-        cierta mística.. pero luego comienza a llover más y más... y dijimos
-        bueno vamos a tener que hacer las pizzas al horno. Cuando terminamos las
-        pizzas y nos pusimos a comer, empieza a llover muy fuerte, lo cual
-        comienza a asustarnos...
-      </p>
-      <p>
-        la idea es que desopues resulta que se corta la luz... y cada vez nos
-        empieza a asustar cada vez más... De rrepente llega un mensaje de una de
-        nuestras familias diciendo que busquemos la forma de volvernos porque
-        vieron en las noticias que rio más arriba, la corriente empezaba a subir
-      </p>
-      <p>
-        entonces alguno de nosotros va a mirar el rio y se da cuenta que ya no
-        se estaba viendo el borde del terreno, el agua ya ghabia sobre pasado
-      </p>
-      <p>
-        entocnes tenemos que decidir si nos camos o nos quedamos.. de las dos
-        formas corremos riesgos... debatimos en el grupo y decidimos que lo
-        mejor era irnos. Sabiamos que la lancha colectivo no pasaba más porque
-        ya a la tarde había pasado la última y hasta el día siguiente no iba a
-        haber otra. Pero uno de nosotros, el dueño de la casa, sabe que hay un
-        gomon con motor en el cobertizo de la casa.. el problema es que no sabe
-        si esta la llave y si esta no sabe dónde
-      </p>
-      <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5"
-        @click="$router.push('/busqueda-llave-cobertizo')"
-      >
-        Vamos a buscar la llave del cobertizo
-      </button>
+    <div class="grid grid-cols-1 place-content-center">
+      <div class="text-center px-4 py-2 m-2">
+        <h1 class="title">Escape Room</h1>
+      </div>
+      <div class="text-center px-4 py-2 m-2">
+        <h3 class="subtitle">Campamento de Verano Jóvenes Metro</h3>
+      </div>
+      <div class="text-center px-4 py-2 m-2 justify-items-auto">
+        <div class="flex justify-center items-center px-4 py-2">
+          <img
+            src="https://imganuncios.mitula.net/medium/casa_nueva_en_alquiler_primera_seccion_delta_1_ba%C3%B1o_5950066594042062417.jpg"
+            alt=""
+            class="my-5 max-w-xl"
+          />
+        </div>
+      </div>
+      <div class="text-center px-4 py-2 m-2 justify-items-auto">
+        <div
+          class="flex justify-center items-center px-4 py-2 cursor-pointer"
+          @click="hide = !hide"
+        >
+          <span v-if="!hide">Ver prologo</span>
+          <span v-if="hide">Ocultar prologo</span>
+        </div>
+      </div>
+      <div v-if="hide" class="text-justify px-4 py-2 m-2">
+        <transition name="fade">
+          <p>
+            Se hace enero 2021, la cuarentena termina y decidimos hacer todxs
+            juntxs una escapada, un finde a una isla en el delta del tigre. La
+            idea es quedarnos una noche, del sábado al domingo y así lo hicimos.
+            Tomamos la lancha colectivo el sábado por la mañana, cargamos la
+            carne para el asado, bolsas de dormir, unas cervecitas… Después de
+            una hora y media en lancha, llegamos! Nos acomodamos enseguida, la
+            casa no es la gran cosa pero nos sirve… lo que si tiene una tremenda
+            parrilla, por lo que nos ponemos a hacer un asado para almorzar.
+            Cuando terminamos de comer, Clari trae unos juegos de mesa y nos
+            ponemos a jugar afuera, pero al rato se empieza a nublar y nos
+            metemos adentro. Después de unas horas de tomar mate y jugar nos
+            predisponemos a empezar a amasar las pizzas para la noche, queríamos
+            hacerlas a la parrilla pero se larga a lloviznar y entonces
+            decidimos hacerlas al horno. Mientras que hacemos la masa, empieza a
+            oscurecer. Si bien al principio estaba lloviznando y eso le daba
+            cierta mística, luego comienza a llover más y más fuerte… pero para
+            cuando terminamos de hacer las pizzas y nos pusimos a comer, empieza
+            a llover muy fuerte, lo cual comienza a asustarnos...
+          </p>
+        </transition>
+      </div>
+      <div class="text-justify px-4 py-2 m-2">
+        <transition name="fade">
+          <p class="text-center">
+            y ahora que hacemos? Tenemos que volver a tierra firme...
+          </p>
+        </transition>
+      </div>
+      <div class="text-center px-4 py-2 m-2">
+        <button
+          class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-5"
+          @click="$router.push('/casa')"
+        >
+          Entrar a la casa
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapGetters } from 'vuex';
+export default {
+  data() {
+    return {
+      hide: false,
+    };
+  },
+  computed: {
+    ...mapGetters(['getSeenShed', 'getPartOneKeyFound', 'getPartTwoKeyFound']),
+    havePassword() {
+      return this.getPartOneKeyFound && this.getPartTwoKeyFound;
+    },
+  },
+};
 </script>
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
