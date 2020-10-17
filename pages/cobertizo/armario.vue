@@ -43,12 +43,20 @@
           isla...
         </div>
       </div>
-      <div class="text-center px-4 py-2 m-2">
+      <div v-if="open" class="text-center px-4 py-2 m-2">
         <button
           class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
           @click="$router.push('/cobertizo/final')"
         >
           Salir de la isla
+        </button>
+      </div>
+      <div v-if="!open" class="text-center px-4 py-2 m-2">
+        <button
+          class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+          @click="$router.push('/cobertizo/dentro')"
+        >
+          Volver
         </button>
       </div>
     </div>
