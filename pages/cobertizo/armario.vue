@@ -4,39 +4,45 @@
       <h1 class="subtitle">Búsqueda de llave del cobertizo</h1>
       <h4 class="mb-4">Deberíamos buscar donde podría estar la llave</h4>
       <img
-        src="https://images.fineartamerica.com/images-medium-large-5/old-room-abandoned-places-room-with-a-bed-gary-heller.jpg"
+        v-if="open"
+        src="https://s3.eu-central-1.amazonaws.com/cdnm.westwing.com/glossary/uploads/es/2014/08/Westwing_Du_Bout_du_Monde_FINAL_10.jpg"
         alt=""
-        class="my-5"
+        class="my-5 max-h-5"
+      />
+      <img
+        v-if="!open"
+        src="https://politify.us/wp-content/uploads/2018/11/reciclar-muebles-antiguos-y-darles-una-nueva-vida.gif"
+        alt=""
+        class="my-5 max-h-5"
       />
       <div class="px-2 mt-6">
-        <div class="flex -mx-2">
-          <div class="w-1/3 px-2">
+        <div class="flex flex-col justify-center">
+          <div v-if="!open" class="w-1/1 px-2">
             <div class="flex flex-col">
               <button
                 class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                @click="$router.push('/busqueda-llave-cobertizo/armario')"
+                @click="open = !open"
               >
-                Revisar armario
+                Abrir armario
               </button>
             </div>
           </div>
-          <div class="w-1/3 px-2">
+          <div v-if="open" class="w-1/1 px-2">
             <div class="flex flex-col">
-              <button
-                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                @click="$router.push('/busqueda-llave-cobertizo/cama')"
+              <div
+                class="max-w-sm rounded overflow-hidden shadow-lg bg-white text-black text-5xl"
               >
-                Revisar debajo de la cama
-              </button>
+                Esta es la pista para la llave
+              </div>
             </div>
           </div>
-          <div class="w-1/3 px-2">
+          <div class="w-1/1 px-2">
             <div class="flex flex-col">
               <button
                 class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
                 @click="$router.push('/busqueda-llave-cobertizo')"
               >
-                Buscar en otro lugar
+                Volver al living
               </button>
             </div>
           </div>
@@ -48,8 +54,13 @@
 
 <script>
 export default {
+  data() {
+    return {
+      open: false,
+    };
+  },
   head: {
-    title: 'Habitación',
+    title: 'Armario',
   },
 };
 </script>

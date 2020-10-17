@@ -51,5 +51,5 @@ export default {
   head: {
     title: 'Cocina',
   },
-}
+};
 </script>

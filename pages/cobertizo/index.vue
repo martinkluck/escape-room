@@ -4,31 +4,21 @@
       <h1 class="subtitle">Búsqueda de llave del cobertizo</h1>
       <h4>Deberíamos buscar donde podría estar la llave</h4>
       <img
-        src="https://pbs.twimg.com/media/EFZ3UeuW4AAK4dh.jpg"
+        src="https://p0.pikist.com/photos/743/453/latch-door-latch-fastening-fasten-secure-close-hold-wood-wooden-door.jpg"
         alt=""
         class="my-5"
       />
       <div class="px-5">
         <div class="flex -mx-2 flex-wrap">
-          <div class="w-1/2 px-2">
+          <div class="w-1/1 px-2">
             <div class="flex flex-col">
-              ¿Estará en la cocina?
+              Ingresar contraseña
+              <input v-model="password" type="password" class="text-black" />
               <button
                 class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                @click="$router.push('/busqueda-llave-cobertizo/cocina')"
+                @click="checkPassword"
               >
-                Ir a la cocina
-              </button>
-            </div>
-          </div>
-          <div class="w-1/2 px-2">
-            <div class="flex flex-col">
-              ¿Estará en la habitación?
-              <button
-                class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                @click="$router.push('/busqueda-llave-cobertizo/habitacion')"
-              >
-                Ir a la habitación
+                Revisar contraseña
               </button>
             </div>
           </div>
@@ -36,9 +26,9 @@
             <div class="flex flex-col">
               <button
                 class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-                @click="$router.push('/cobertizo')"
+                @click="$router.push('/busqueda-llave-cobertizo')"
               >
-                Ir al cobertizo
+                Volver al living
               </button>
             </div>
           </div>
@@ -50,8 +40,21 @@
 
 <script>
 export default {
+  data() {
+    return {
+      password: '',
+      valid: 'asucena',
+    };
+  },
+  methods: {
+    checkPassword() {
+      if (this.password === this.valid) {
+        this.$router.push('/cobertizo/dentro');
+      }
+    },
+  },
   head: {
-    title: 'Living',
+    title: 'Puerta cobertizo',
   },
 };
 </script>
