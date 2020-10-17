@@ -24,7 +24,7 @@
       >
         <button
           class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-          @click="arranca = true"
+          @click="revisarArranca"
         >
           Revisar si el motor arranca
         </button>
@@ -46,7 +46,7 @@
       <div v-if="arranca" class="text-center px-4 py-2 m-2">
         <button
           class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-          @click="averia = !averia"
+          @click="setAveria(!averia)"
         >
           Revisar si el motor tiene alguna falla
         </button>
@@ -76,7 +76,7 @@
             Revisar armario</button
           ><button
             class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 m-2 rounded"
-            @click="encontrarCombustible"
+            @click="$router.push('/cobertizo/estanterias')"
           >
             Revisar estanterías
           </button>
@@ -87,20 +87,20 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 export default {
-  data() {
-    return {
-      arranca: false,
-      faltaCombustible: false,
-      averia: false,
-    };
+  computed: {
+    ...mapGetters(['arranca', 'faltaCombustible', 'averia']),
   },
   methods: {
+    ...mapActions(['setArranca', 'setFaltaCombustible', 'setAveria']),
     revisarCombustible() {
-      this.faltaCombustible = true;
-      this.arranca = false;
+      this.setFaltaCombustible(true);
+      this.setArranca(false);
     },
-    encontrarCombustible() {},
+    revisarArranca() {
+      this.setArranca(true);
+    },
   },
   head: {
     title: 'Dentro del cobertizo',
