@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <ColorSwitch />
     <div class="grid grid-cols-1 place-content-center">
       <div class="text-center px-4 py-2 m-2">
         <h1 class="title">Escape Room</h1>
