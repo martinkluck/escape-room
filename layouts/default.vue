@@ -4,13 +4,19 @@
     <main class="main bg-light dark:bg-dark dark:text-white">
       <Nuxt />
     </main>
-    <BaseFooter />
+    <BaseFooter class="md:hidden" />
   </div>
 </template>
 
 <style>
 .main {
   height: calc(100% - var(--header) - var(--footer));
+}
+
+@media (min-width: 768px) {
+  .main {
+    height: calc(100% - var(--header));
+  }
 }
 
 html {

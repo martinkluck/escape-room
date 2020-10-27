@@ -56,7 +56,7 @@
           </p>
         </transition>
       </div>
-      <div class="text-center px-4 py-2 m-2">
+      <div class="text-center px-4 py-2 m-2 mb-10">
         <button
           class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-5"
           @click="$router.push('/casa')"
