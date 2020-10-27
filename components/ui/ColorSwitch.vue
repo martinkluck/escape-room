@@ -1,11 +1,10 @@
 <template>
   <div class="text-sm">
-    {{ $colorMode.preference }}
     <IconDark
-      v-if="$colorMode.preference === 'dark'"
-      @click="changeTheme('light')"
+      v-if="$colorMode.value === 'light'"
+      @click="changeTheme('dark')"
     />
-    <IconLight v-else @click="changeTheme('dark')" />
+    <IconLight v-else @click="changeTheme('light')" />
   </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <ColorSwitch />
     <div class="grid grid-cols-1 place-content-center">
       <div class="text-center px-4 py-2 m-2">
         <h1 class="title">Escape Room</h1>
@@ -13,7 +12,7 @@
           <img
             src="https://imganuncios.mitula.net/medium/casa_nueva_en_alquiler_primera_seccion_delta_1_ba%C3%B1o_5950066594042062417.jpg"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>
@@ -26,7 +25,7 @@
           <span v-if="hide">Ocultar prologo</span>
         </div>
       </div>
-      <div v-if="hide" class="text-justify px-4 py-2 m-2">
+      <div v-if="hide" class="text-center px-4 py-2 m-2">
         <transition name="fade">
           <p>
             Se hace enero 2021, la cuarentena termina y decidimos hacer todxs

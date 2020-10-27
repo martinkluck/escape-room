@@ -14,7 +14,7 @@
           <img
             src="https://img.ar.class.posot.com/es_ar/2018/03/19/Bote-lagunero-completo-20180319040642.jpg"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>

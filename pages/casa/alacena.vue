@@ -14,7 +14,7 @@
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNS-PAZw577aN68kC77PzT9p2R91eJGKmM6Q&usqp=CAU"
             alt=""
-            class="my-5 max-w-full"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>

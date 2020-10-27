@@ -1,10 +1,18 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="h-screen">
+    <BaseHeader />
+    <main class="main bg-light dark:bg-dark dark:text-white">
+      <Nuxt />
+    </main>
+    <BaseFooter />
   </div>
 </template>
 
 <style>
+.main {
+  height: calc(100% - var(--header) - var(--footer));
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;

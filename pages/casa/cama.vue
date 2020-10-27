@@ -12,7 +12,7 @@
           <img
             src="https://estaticos.serpadres.es/media/cache/1140x_thumb/uploads/images/article/5f0dd3cf5cafe82ea82b5182/monstruo-debajo-cama.jpg"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>

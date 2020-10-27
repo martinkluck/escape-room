@@ -1,17 +1,22 @@
 module.exports = {
   important: true,
   theme: {
-    fontFamily: {
-      display: ['Indie Flower', 'sans-serif'],
-      body: ['Indie Flower', 'sans-serif'],
-    },
     extend: {
+      fill: (theme) => ({
+        white: theme('colors.white'),
+      }),
+      backgroundColor: (theme) => ({
+        light: theme('colors.gray-main.300'),
+        dark: theme('colors.blue-main.900'),
+      }),
       colors: {
-        cyan: '#9cdbff',
-      },
-      margin: {
-        96: '24rem',
-        128: '32rem',
+        'gray-main': {
+          300: '#EAEDF2',
+        },
+        'blue-main': {
+          800: '#131419',
+          900: '#1C1C24',
+        },
       },
     },
     container: {
@@ -21,4 +26,8 @@ module.exports = {
   variants: {
     opacity: ['responsive', 'hover'],
   },
+  experimental: {
+    darkModeVariant: true,
+  },
+  dark: 'class',
 };

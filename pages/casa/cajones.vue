@@ -14,7 +14,7 @@
           <img
             src="https://http2.mlstatic.com/D_NQ_NP_885755-MLA43311544079_082020-V.jpg"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>

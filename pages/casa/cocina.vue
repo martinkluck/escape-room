@@ -13,7 +13,7 @@
         <img
           src="https://image.freepik.com/foto-gratis/antigua-cocina-oscura-casa-abandonada_32342-764.jpg"
           alt=""
-          class="my-5 max-w-xl"
+          class="object-contain w-full my-5"
         />
       </div>
       <div class="text-center px-4 py-2 m-2">

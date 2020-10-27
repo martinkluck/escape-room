@@ -15,7 +15,7 @@
           <img
             src="https://images.fineartamerica.com/images-medium-large-5/old-room-abandoned-places-room-with-a-bed-gary-heller.jpg"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>

@@ -18,7 +18,7 @@
           <img
             src="https://pbs.twimg.com/media/EEYVaIdVUAAuXWd.jpg"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>

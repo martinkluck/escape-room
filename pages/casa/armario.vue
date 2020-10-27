@@ -12,7 +12,7 @@
           <img
             src="https://s3.eu-central-1.amazonaws.com/cdnm.westwing.com/glossary/uploads/es/2014/08/Westwing_Du_Bout_du_Monde_FINAL_10.jpg"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>
@@ -21,7 +21,7 @@
           <img
             src="https://politify.us/wp-content/uploads/2018/11/reciclar-muebles-antiguos-y-darles-una-nueva-vida.gif"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>

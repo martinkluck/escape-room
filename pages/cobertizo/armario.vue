@@ -12,7 +12,7 @@
           <img
             src="https://thumbs.dreamstime.com/t/armario-abandonado-viejo-de-la-puerta-para-el-candado-%C3%A9ste-es-los-footae-del-154116187.jpg"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>
@@ -21,7 +21,7 @@
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTx478suJlFXfB-OKOygXUXRnYt1VUrFevLRQ&usqp=CAU"
             alt=""
-            class="my-5 max-w-xl"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>

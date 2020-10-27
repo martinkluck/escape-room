@@ -17,7 +17,7 @@
           <img
             src="https://p0.pikist.com/photos/743/453/latch-door-latch-fastening-fasten-secure-close-hold-wood-wooden-door.jpg"
             alt=""
-            class="my-5 max-w-xl sm:max-w-xs"
+            class="object-contain w-full my-5"
           />
         </div>
       </div>
