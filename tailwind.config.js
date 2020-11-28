@@ -10,12 +10,15 @@ module.exports = {
         dark: theme('colors.blue-main.900'),
       }),
       colors: {
+        'red-main': {
+          600: '#F43D35',
+        },
         'gray-main': {
           300: '#EAEDF2',
         },
         'blue-main': {
-          800: '#131419',
-          900: '#1C1C24',
+          800: '#0d1131',
+          900: '#070919',
         },
       },
     },

@@ -50,8 +50,39 @@ export default {
     classSuffix: '',
   },
 
+  firebase: {
+    config: {
+      apiKey: process.env.VUE_APP_API_KEY,
+      authDomain: process.env.VUE_APP_AUTH_DOMAIN,
+      databaseURL: process.env.VUE_APP_DATABASE_URL,
+      projectId: process.env.VUE_APP_PROJECT_ID,
+      storageBucket: process.env.VUE_APP_STORAGE_BUCKET,
+      messagingSenderId: process.env.VUE_APP_MESSAGING_SENDER_ID,
+      appId: process.env.VUE_APP_ID,
+      measurementId: process.env.VUE_APP_MEASUREMENT_ID,
+    },
+    services: {
+      auth: true,
+      firestore: true,
+      storage: true,
+      analytics: true,
+      performance: true,
+    },
+  },
+
+  env: {
+    VUE_APP_FIREBASE_KEY: process.env.VUE_APP_API_KEY,
+    VUE_APP_AUTH_DOMAIN: process.env.VUE_APP_AUTH_DOMAIN,
+    VUE_APP_DATABASE_URL: process.env.VUE_APP_DATABASE_URL,
+    VUE_APP_PROJECT_ID: process.env.VUE_APP_PROJECT_ID,
+    VUE_APP_STORAGE_BUCKET: process.env.VUE_APP_STORAGE_BUCKET,
+    VUE_APP_MESSAGING_SENDER_ID: process.env.VUE_APP_MESSAGING_SENDER_ID,
+    VUE_APP_ID: process.env.VUE_APP_ID,
+    VUE_APP_MEASUREMENT_ID: process.env.VUE_APP_MEASUREMENT_ID,
+  },
+
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/svg'],
+  modules: ['@nuxtjs/svg', '@nuxtjs/firebase'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
