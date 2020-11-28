@@ -57,14 +57,14 @@
 <script>
 import { mapGetters } from 'vuex';
 export default {
+  head: {
+    title: 'Casa',
+  },
   computed: {
     ...mapGetters(['getSeenShed', 'getPartOneKeyFound', 'getPartTwoKeyFound']),
     havePassword() {
       return this.getPartOneKeyFound && this.getPartTwoKeyFound;
     },
-  },
-  head: {
-    title: 'Casa',
   },
 };
 </script>

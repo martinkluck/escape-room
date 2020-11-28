@@ -50,14 +50,14 @@ export default {
       revisar: false,
     };
   },
+  head: {
+    title: 'Dentro del cobertizo',
+  },
   methods: {
     revisarCombustible() {
       this.faltaCombustible = true;
       this.arranca = false;
     },
-  },
-  head: {
-    title: 'Dentro del cobertizo',
   },
 };
 </script>

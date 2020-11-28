@@ -72,15 +72,15 @@ export default {
       valid: '1978',
     };
   },
+  head: {
+    title: 'Armario',
+  },
   methods: {
     checkPassword() {
       if (this.password === this.valid) {
         this.open = !this.open;
       }
     },
-  },
-  head: {
-    title: 'Armario',
   },
 };
 </script>

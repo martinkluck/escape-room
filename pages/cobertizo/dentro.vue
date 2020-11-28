@@ -89,6 +89,9 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 export default {
+  head: {
+    title: 'Dentro del cobertizo',
+  },
   computed: {
     ...mapGetters(['arranca', 'faltaCombustible', 'averia']),
   },
@@ -101,9 +104,6 @@ export default {
     revisarArranca() {
       this.setArranca(true);
     },
-  },
-  head: {
-    title: 'Dentro del cobertizo',
   },
 };
 </script>

@@ -63,6 +63,9 @@ export default {
       open: false,
     };
   },
+  head: {
+    title: 'Armario',
+  },
   computed: {
     ...mapGetters(['getPartOneKeyFound', 'getPartTwoKeyFound']),
     havePassword() {
@@ -75,9 +78,6 @@ export default {
       this.open = !this.open;
       this.setPartTwoKeyFound(true);
     },
-  },
-  head: {
-    title: 'Armario',
   },
 };
 </script>

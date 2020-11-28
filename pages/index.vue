@@ -76,6 +76,9 @@ export default {
       hide: false,
     };
   },
+  head: {
+    title: 'Escape Room - La isla',
+  },
   computed: {
     ...mapGetters(['getSeenShed', 'getPartOneKeyFound', 'getPartTwoKeyFound']),
     havePassword() {

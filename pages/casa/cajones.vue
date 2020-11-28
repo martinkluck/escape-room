@@ -75,6 +75,9 @@ export default {
       pista: false,
     };
   },
+  head: {
+    title: 'Cajones',
+  },
   computed: {
     ...mapGetters(['getPartOneKeyFound', 'getPartTwoKeyFound']),
     havePassword() {
@@ -87,9 +90,6 @@ export default {
       this.message = '';
       this.setPartOneKeyFound(true);
     },
-  },
-  head: {
-    title: 'Cajones',
   },
 };
 </script>

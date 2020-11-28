@@ -52,6 +52,9 @@ export default {
       valid: 'asucena',
     };
   },
+  head: {
+    title: 'Puerta cobertizo',
+  },
   computed: {
     ...mapGetters(['getSeenShed', 'getPartOneKeyFound', 'getPartTwoKeyFound']),
     havePassword() {
@@ -71,9 +74,6 @@ export default {
       }
       this.$router.push('/casa');
     },
-  },
-  head: {
-    title: 'Puerta cobertizo',
   },
 };
 </script>
