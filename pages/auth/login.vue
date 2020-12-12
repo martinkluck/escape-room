@@ -7,7 +7,11 @@
     <div
       class="login-body mt-12 pt-56 h-full flex flex-col items-center bg-gray-main-300 dark:bg-blue-main-800"
     >
-      <SocialLoginButton type="google" text="Inicio de sesión con google" />
+      <SocialLoginButton
+        type="google"
+        text="Inicio de sesión con google"
+        @click="loginWithGoogle"
+      />
     </div>
   </div>
 </template>
@@ -16,6 +20,22 @@
 export default {
   name: 'Login',
   layout: 'auth',
+  head: {
+    title: 'Login',
+  },
+  methods: {
+    async loginWithGoogle() {
+      try {
+        const provider = new this.$fireModule.auth.GoogleAuthProvider();
+        const result = await this.$fire.auth.signInWithPopup(provider);
+        // eslint-disable-next-line no-console
+        console.log(result);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error(error);
+      }
+    },
+  },
 };
 </script>
 
