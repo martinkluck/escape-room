@@ -17,7 +17,7 @@
     "*.{css,vue}": "stylelint"
   },
   "dependencies": {
-    "@nuxtjs/firebase": "^7.4.0",
+    "@nuxtjs/firebase": "^7.4.1",
     "cookieparser": "^0.1.0",
     "core-js": "^3.8.3",
     "firebase": "^8.2.3",
