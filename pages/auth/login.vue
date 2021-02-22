@@ -1,14 +1,14 @@
 <template>
   <div class="h-full overflow-hidden">
     <div class="flex justify-end p-4">
-      <ColorSwitch class="w-5" />
+      <UiColorSwitch class="w-5" />
     </div>
     <h1 class="text-center text-3xl font-bold">Escape Room</h1>
     <div
       v-if="!token"
       class="login-body mt-12 pt-56 h-full flex flex-col items-center bg-gray-main-300 dark:bg-blue-main-800"
     >
-      <SocialLoginButton
+      <AuthSocialLoginButton
         type="google"
         text="Inicio de sesión con google"
         @click="loginWithGoogle"
