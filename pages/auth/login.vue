@@ -5,6 +5,7 @@
     </div>
     <h1 class="text-center text-3xl font-bold">Escape Room</h1>
     <div
+      v-if="!token"
       class="login-body mt-12 pt-56 h-full flex flex-col items-center bg-gray-main-300 dark:bg-blue-main-800"
     >
       <SocialLoginButton
@@ -20,6 +21,11 @@
 export default {
   name: 'Login',
   layout: 'auth',
+  data() {
+    return {
+      token: null,
+    };
+  },
   head: {
     title: 'Login',
   },
@@ -30,6 +36,7 @@ export default {
         const result = await this.$fire.auth.signInWithPopup(provider);
         // eslint-disable-next-line no-console
         console.log(result);
+        this.token = result.credential.idToken;
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error(error);
