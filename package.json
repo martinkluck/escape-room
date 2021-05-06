@@ -20,7 +20,7 @@
     "@nuxt/cli": "^2.15.4",
     "@nuxtjs/firebase": "^7.5.0",
     "cookieparser": "^0.1.0",
-    "core-js": "^3.11.2",
+    "core-js": "^3.11.3",
     "firebase": "^8.5.0",
     "js-cookie": "^2.2.1",
     "nuxt": "^2.15.4"
@@ -33,7 +33,7 @@
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/svg": "^0.1.12",
-    "@nuxtjs/tailwindcss": "^4.0.3",
+    "@nuxtjs/tailwindcss": "^4.1.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.25.0",
     "eslint-config-prettier": "^8.3.0",
