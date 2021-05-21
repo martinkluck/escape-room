@@ -23,7 +23,7 @@
     "core-js": "^3.12.0",
     "firebase": "^8.6.2",
     "js-cookie": "^2.2.1",
-    "nuxt": "^2.15.4"
+    "nuxt": "^2.15.6"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^12.1.1",
