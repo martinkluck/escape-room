@@ -26,7 +26,7 @@
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/config-conventional": "^13.1.0",
     "@commitlint/cli": "^13.1.0",
     "@nuxtjs/color-mode": "^2.0.5",
     "@nuxtjs/color-mode": "^2.0.10",
