@@ -20,7 +20,7 @@
     "@nuxt/cli": "^2.15.8",
     "@nuxtjs/firebase": "^8.2.2",
     "cookieparser": "^0.1.0",
-    "core-js": "^3.24.1",
+    "core-js": "^3.25.3",
     "firebase": "^9.10.0",
     "js-cookie": "^3.0.1",
     "nuxt": "^2.15.8",
