@@ -24,7 +24,7 @@
     "firebase": "^9.15.0",
     "js-cookie": "^3.0.1",
     "nuxt": "^2.15.8",
-    "vue": "^2.7.14",
+    "vue": "^3.2.45",
     "vue-server-renderer": "^2.7.14",
     "vue-template-compiler": "^2.7.14",
     "vuex": "^4.1.0",
