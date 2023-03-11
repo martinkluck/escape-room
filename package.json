@@ -21,7 +21,7 @@
     "@nuxtjs/firebase": "^8.2.2",
     "cookieparser": "^0.1.0",
     "core-js": "^3.29.0",
-    "firebase": "^9.15.0",
+    "firebase": "^9.17.2",
     "js-cookie": "^3.0.1",
     "nuxt": "^2.16.2",
     "vue": "^2.7.14",
